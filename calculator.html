@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .calculator {
+            width: 400px;
+            height: 350px;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .calculator h2 {
+            color: #33CC33;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .input-field {
+            margin-bottom: 20px;
+        }
+        
+        .input-field label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .input-field input {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .vehicle-type {
+            margin-bottom: 20px;
+        }
+        
+        .vehicle-type label {
+            margin-right: 20px;
+        }
+        
+        .calculate-btn {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .calculate-btn:hover {
+            background-color: #1A76D2;
+        }
+        
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            color: #33CC33;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .marquee {
+            width: 100%;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: marquee 10s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% {
+                transform: translateX(50%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="marquee"><h1 style="color:blue">Carbon Footprint Calculator</h1></div>-->
+    <div class="calculator">
+        <h2>Carbon Calculator</h2>
+        <form id="carbon-form">
+            <div class="input-field">
+                <label for="distance">Distance (km)</label>
+                <input type="number" id="distance" required>
+            </div>
+            <div class="vehicle-type">
+                <label>
+                    <input type="radio" name="vehicle" value="petrol" checked> Petrol
+                </label>
+                <label>
+                    <input type="radio" name="vehicle" value="diesel"> Diesel
+                </label>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="calculate-btn">Calculate</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    
+    <script>
+        document.getElementById('carbon-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            calculateCarbon();
+        });
+        
+        function calculateCarbon() {
+            const distance = document.getElementById('distance').value;
+            const vehicle = document.querySelector('input[name="vehicle"]:checked').value;
+            let carbonFootprint;
+            
+            if (vehicle === 'petrol') {
+                carbonFootprint = distance * 0.22; // g/km
+            } else if (vehicle === 'diesel') {
+                carbonFootprint = distance * 0.26; // g/km
+            }
+            
+            document.getElementById('result').innerText = Your carbon footprint is ${carbonFootprint.toFixed(2)} kg;
+        }
+    </script>
+</body>
+</html>
