@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":" Jute Bags",
+        "price": 200,
+        "image": "https://cdn.vibecity.in/providers/61a1cf3e8bb5f400104c60a1/bc4139eb-43d2-47ae-af08-cee5da8aa5b9_49899806-7f5f-44b1-b40c-98255659f75b-3X.png"
+    },
+    {
+        "id": 2,
+        "name":" Paper Water Bottle",
+        "price": 250,
+        "image": "https://static.wixstatic.com/media/91bd43_dc8da7d570f74772af3d76683b3b1695~mv2.jpg/v1/fill/w_544,h_478,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/91bd43_dc8da7d570f74772af3d76683b3b1695~mv2.jpg"
+    },
+    {
+        "id": 3,
+        "name":" Soap Bars",
+        "price": 290,
+        "image": "https://satopradhan.com/cdn/shop/files/Preview-1Almond_SheaSoap.jpg?v=1713608647"
+    },
+    {
+        "id": 4,
+        "name":" Wooden Tooth Brush",
+        "price": 200,
+        "image": "https://alidropship.com/wp-content/uploads/2023/11/eco-friendly-toothbrushes-1024x826_jpg.jpg"
+    },
+    {
+        "id": 5,
+        "name":" Recycled Paper Notebooks",
+        "price": 300,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGWVe027pMwc_A1b-nRmaNdEixIEtgUN6DxA&s"
+    },
+    {
+        "id": 6,
+        "name":" Bamboo Pens",
+        "price": 200,
+        "image": "https://m.media-amazon.com/images/I/81hqr4XYHpL.jpg"
+    },
+    {
+        "id": 7,
+        "name":" Cooking Pot",
+        "price": 200,
+        "image": "https://m.media-amazon.com/images/I/813keyT-f4L.AC_UF350,350_QL80.jpg"
+    },
+    {
+        "id": 8,
+        "name":" Bamboo Straws",
+        "price": 200,
+        "image": "https://m.media-amazon.com/images/I/71JxDAglJhL.jpg"
+    }
+    
+]
